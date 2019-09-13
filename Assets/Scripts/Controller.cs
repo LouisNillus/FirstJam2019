@@ -12,7 +12,7 @@ public class Controller : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         MainPack.RBController(this.gameObject, 5, "z", "s", "q", "d");
 
