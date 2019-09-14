@@ -6,33 +6,50 @@ using UnityEditor;
 public class Car_spawn : MonoBehaviour
 {
 
-    int delay;
-    Transform objTransform;
-
-    public List<GameObject> activeCarList = new List<GameObject>();
+    float delay;
+    int carSelector, spawnColumn; // randoms
+    [SerializeField] int maxCarsOnScreen, spawnLine;
+    List<GameObject> prefabCarList = new List<GameObject>();
+    [SerializeField] Car_list scrCarList;
+    List<GameObject> activeCarList = new List<GameObject>(); // public ?
+    //[SerializeField] List<int> columnList = new List<int>();
+    [SerializeField] Transform[] columnArray = new Transform[8];
 
     // Start is called before the first frame update
     void Start()
     {
-
-        objTransform = GetComponent<Transform>();
+        // ensemble des voitures dispo
+        prefabCarList = scrCarList.prefabCarList;
+        InvokeRepeating("GenerateCar", 0f, 3f);
 
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
-        delay = Random.Range(3, 5);
-        ranCar = 
-    }
-    
-    IEnumerator SpawnCar()
-    {
+        carSelector = Random.Range(0, prefabCarList.Count);
 
-        activeCarList.Add(new carList[ranCar].instan);
+
+        spawnColumn = Random.Range(0,8);
+
+    }
+
+    IEnumerator SpawnNewCar()
+    {
+        delay = Random.Range(0, 3);
+        if (activeCarList.Count < maxCarsOnScreen)
+        {
+            GameObject newCar = Instantiate(prefabCarList[carSelector], columnArray[spawnColumn]);
+            activeCarList.Add(newCar);
+            Debug.Log("ivordnbid");
+        }
 
         yield return new WaitForSeconds(delay);
-        
-    }*/
+    }
+
+    public void GenerateCar()
+    {
+        StartCoroutine(SpawnNewCar());
+    }
 
 }
