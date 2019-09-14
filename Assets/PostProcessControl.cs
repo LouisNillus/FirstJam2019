@@ -7,7 +7,8 @@ public class PostProcessControl : MonoBehaviour
 {
 
     public PostProcessVolume volume;
-    private Vignette vignette;
+    [HideInInspector]
+    public Vignette vignette;
     private Bloom bloom;
     private ChromaticAberration chromAb;
 
@@ -17,7 +18,6 @@ public class PostProcessControl : MonoBehaviour
         volume.profile.TryGetSettings(out vignette);
         volume.profile.TryGetSettings(out bloom);
         volume.profile.TryGetSettings(out chromAb);
-        vignette.color.value = Color.blue;
     }
 
     // Update is called once per frame
@@ -49,5 +49,34 @@ public class PostProcessControl : MonoBehaviour
         }
 
         bloom.intensity.value = initialValue;
+    }
+
+
+    public IEnumerator VignetteTransitionIn(float initialValue, float finalValue, float inDuration, float outDuration)
+    {
+        float time = 0.0f;
+
+        while (time < inDuration)
+        {
+            vignette.intensity.value = Mathf.Lerp(initialValue, finalValue, time / inDuration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        vignette.intensity.value = finalValue;
+    }
+
+    public IEnumerator VignetteTransitionOut(float initialValue, float finalValue, float inDuration, float outDuration)
+    {
+        float time = 0.0f;
+
+        while (time < outDuration)
+        {
+            vignette.intensity.value = Mathf.Lerp(finalValue, initialValue, time / outDuration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        vignette.intensity.value = initialValue;
     }
 }

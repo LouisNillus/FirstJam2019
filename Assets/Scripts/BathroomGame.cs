@@ -5,7 +5,7 @@ using UnityEngine;
 public class BathroomGame : MonoBehaviour
 {
     [SerializeField]
-    private float chosenDelay;
+    private float chosenDelay = 0;
     [SerializeField]
     private const int reached = 65;
 
