@@ -52,7 +52,7 @@ public class PostProcessControl : MonoBehaviour
     }
 
 
-    public IEnumerator VignetteTransitionIn(float initialValue, float finalValue, float inDuration, float outDuration)
+    public IEnumerator VignetteTransition(float initialValue, float finalValue, float inDuration)
     {
         float time = 0.0f;
 
@@ -64,19 +64,5 @@ public class PostProcessControl : MonoBehaviour
         }
 
         vignette.intensity.value = finalValue;
-    }
-
-    public IEnumerator VignetteTransitionOut(float initialValue, float finalValue, float inDuration, float outDuration)
-    {
-        float time = 0.0f;
-
-        while (time < outDuration)
-        {
-            vignette.intensity.value = Mathf.Lerp(finalValue, initialValue, time / outDuration);
-            time += Time.deltaTime;
-            yield return null;
-        }
-
-        vignette.intensity.value = initialValue;
     }
 }
