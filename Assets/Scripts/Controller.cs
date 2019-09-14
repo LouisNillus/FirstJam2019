@@ -5,6 +5,11 @@ using LON_Tools;
 
 public class Controller : MonoBehaviour
 {
+    [Range(0,10)]
+    public int speed;
+
+    public bool allowControl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +19,14 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        MainPack.RBController(this.gameObject, 5, "z", "s", "q", "d");
+        if(allowControl == true)
+        {
+            MainPack.RBController(this.gameObject, speed, "z", "s", "q", "d");
+        }
 
         if(Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
-            Debug.Log("hooo");
+
         }
     }
 }
