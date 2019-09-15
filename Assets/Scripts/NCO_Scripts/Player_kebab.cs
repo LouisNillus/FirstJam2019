@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Player_kebab : MonoBehaviour
 {
-    bool canClick = false;
+
     bool hasMoney = false;
+    public GameObject kebab;
+    public GameObject text_win;
+    public GameObject text_lose;
 
     // Start is called before the first frame update
     void Start()
@@ -16,20 +19,27 @@ public class Player_kebab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Joystick1Button0) && (canClick == true) && (hasMoney == false))
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Bin")
         {
-            // Instantiate();
             hasMoney = true;
             Debug.Log("has money");
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if((other.tag == "Bin") || (other.tag == "Chef"))
+        if (collision.tag == "Kebab")
         {
-            canClick = true;
-            Debug.Log("can click");
+            if(hasMoney == true)
+            {
+                Instantiate(kebab);
+                Instantiate(text_win);
+            }
+            else
+            {
+                Instantiate(text_lose);
+            }
         }
     }
 }
