@@ -1,34 +1,31 @@
 fileFormatVersion: 2
-guid: 14c5580391fa5544c8c59d767e0fbbc1
+guid: 7e3c0ff79bbb9bf438975a6a75f55bb4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6064391832318734358
-    second: sprites_sheets_walls_0
+      213: -2552124079042640952
+    second: Walk_Down_0
   - first:
-      213: 2745657803285595878
-    second: sprites_sheets_walls_1
+      213: 7393945022160921464
+    second: Walk_Down_1
   - first:
-      213: 3299015505610287003
-    second: sprites_sheets_walls_2
+      213: 2127659032470182028
+    second: Walk_Down_2
   - first:
-      213: -9108335735900428727
-    second: sprites_sheets_walls_3
+      213: -4241166664574320460
+    second: Walk_Down_3
   - first:
-      213: -7279397188100990385
-    second: sprites_sheets_walls_4
+      213: -4685979422728927703
+    second: Walk_Down_4
   - first:
-      213: -8005433035688755913
-    second: sprites_sheets_walls_5
+      213: -5208022382498550526
+    second: Walk_Down_5
   - first:
-      213: 7523073650143839091
-    second: sprites_sheets_walls_6
+      213: 7839089781559572045
+    second: Walk_Down_6
   - first:
-      213: -5186368927560036113
-    second: sprites_sheets_walls_7
-  - first:
-      213: 181131747682695625
-    second: sprites_sheets_walls_8
+      213: -1284474841241798095
+    second: Walk_Down_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -113,139 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprites_sheets_walls_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 839831bca923c3e4596087118b8f203d
-      internalID: -6064391832318734358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_sheets_walls_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7f5a9b9113bbfe4e8cd92afae3b78b0
-      internalID: 2745657803285595878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_sheets_walls_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71eb576485da54e4d951c0e688c4d0fe
-      internalID: 3299015505610287003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_sheets_walls_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6bec659668bb5a4ba82b25c72d48b7a
-      internalID: -9108335735900428727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_sheets_walls_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b57d83395b72aba4a8f81a73523018aa
-      internalID: -7279397188100990385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_sheets_walls_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53b7cdae466db874d8009bf99ad29d12
-      internalID: -8005433035688755913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_sheets_walls_6
+      name: Walk_Down_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 32
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980afd70476b0534e8a5a8c45d4b60c7
-      internalID: 7523073650143839091
+      spriteID: 234d93f12cccbe14fb6ac59d768a577e
+      internalID: -2552124079042640952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_sheets_walls_7
+      name: Walk_Down_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 32
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bdf71c08627947439082c3e1e1c6186
-      internalID: -5186368927560036113
+      spriteID: 46e8f4b132d2a754d868cd2de68156cc
+      internalID: 7393945022160921464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_sheets_walls_8
+      name: Walk_Down_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 32
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,8 +166,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28ae4691a370b9f48b5961a5d12e0474
-      internalID: 181131747682695625
+      spriteID: 31efe34ecfee6c04b95a28da26a38c01
+      internalID: 2127659032470182028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Down_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0833d589b3e0043b9afde37e338f0f
+      internalID: -4241166664574320460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Down_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097d7abedd1e87a4fb38ec6f0e4c547b
+      internalID: -4685979422728927703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Down_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974070d328075384e9faa1d3e58b55f6
+      internalID: -5208022382498550526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Down_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79aefd5493fdc85498ac9261eaeb7856
+      internalID: 7839089781559572045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Down_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595e4e1fef42e464ba9f28d0510f2854
+      internalID: -1284474841241798095
       vertices: []
       indices: 
       edges: []

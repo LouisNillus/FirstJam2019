@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: 14c5580391fa5544c8c59d767e0fbbc1
+guid: 1a057ebd7c8a61845a3ad74022237bb7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6064391832318734358
-    second: sprites_sheets_walls_0
+      213: -955604334706330772
+    second: poldance_0
   - first:
-      213: 2745657803285595878
-    second: sprites_sheets_walls_1
+      213: 779016707916845086
+    second: poldance_1
   - first:
-      213: 3299015505610287003
-    second: sprites_sheets_walls_2
+      213: 5125286590408748953
+    second: poldance_2
   - first:
-      213: -9108335735900428727
-    second: sprites_sheets_walls_3
+      213: 5684377016779224982
+    second: poldance_3
   - first:
-      213: -7279397188100990385
-    second: sprites_sheets_walls_4
-  - first:
-      213: -8005433035688755913
-    second: sprites_sheets_walls_5
-  - first:
-      213: 7523073650143839091
-    second: sprites_sheets_walls_6
-  - first:
-      213: -5186368927560036113
-    second: sprites_sheets_walls_7
-  - first:
-      213: 181131747682695625
-    second: sprites_sheets_walls_8
+      213: 7208680732407643728
+    second: poldance_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -113,28 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprites_sheets_walls_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 839831bca923c3e4596087118b8f203d
-      internalID: -6064391832318734358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_sheets_walls_1
+      name: poldance_0
       rect:
         serializedVersion: 2
         x: 32
@@ -148,35 +115,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7f5a9b9113bbfe4e8cd92afae3b78b0
-      internalID: 2745657803285595878
+      spriteID: c7caf879547465445a6859a778962ff4
+      internalID: -955604334706330772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_sheets_walls_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71eb576485da54e4d951c0e688c4d0fe
-      internalID: 3299015505610287003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_sheets_walls_3
+      name: poldance_1
       rect:
         serializedVersion: 2
         x: 0
@@ -190,14 +136,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6bec659668bb5a4ba82b25c72d48b7a
-      internalID: -9108335735900428727
+      spriteID: acea4f75dc3514e4daca163652804799
+      internalID: 779016707916845086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_sheets_walls_4
+      name: poldance_2
       rect:
         serializedVersion: 2
         x: 32
@@ -211,35 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b57d83395b72aba4a8f81a73523018aa
-      internalID: -7279397188100990385
+      spriteID: 19907610587dfc54fac4d666816bd5f6
+      internalID: 5125286590408748953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_sheets_walls_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53b7cdae466db874d8009bf99ad29d12
-      internalID: -8005433035688755913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_sheets_walls_6
+      name: poldance_3
       rect:
         serializedVersion: 2
         x: 0
@@ -253,14 +178,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980afd70476b0534e8a5a8c45d4b60c7
-      internalID: 7523073650143839091
+      spriteID: 3214374828409fb458bfb4bed8d787f2
+      internalID: 5684377016779224982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_sheets_walls_7
+      name: poldance_4
       rect:
         serializedVersion: 2
         x: 32
@@ -274,29 +199,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bdf71c08627947439082c3e1e1c6186
-      internalID: -5186368927560036113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_sheets_walls_8
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28ae4691a370b9f48b5961a5d12e0474
-      internalID: 181131747682695625
+      spriteID: b4be797da2b58024b8c6bf09f551369a
+      internalID: 7208680732407643728
       vertices: []
       indices: 
       edges: []
