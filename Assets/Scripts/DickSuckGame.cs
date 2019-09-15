@@ -32,6 +32,10 @@ public class DickSuckGame : MonoBehaviour
         if(points >= scoreToReach)
         {
             dicksSucked++;
+            foreach(ParticleSystem ps in myCumPS)
+            {
+                ps.Emit(2);
+            }
             points = 0;
         }
 
