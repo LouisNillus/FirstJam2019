@@ -5,7 +5,7 @@ using UnityEngine;
 public class Car_movement : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField] int initSpeed;
+    public float initSpeed;
     Transform objTransform;
     [SerializeField] Sprite[] spriteArray = new Sprite[2];
     SpriteRenderer sprite;
@@ -24,7 +24,7 @@ public class Car_movement : MonoBehaviour
         if (objTransform.position.x > 0)
         {
             sprite.sprite = spriteArray[0];
-            rb.velocity = new Vector2(0, initSpeed);
+            rb.velocity = new Vector2(0, initSpeed*2);
         }
         else
         {
