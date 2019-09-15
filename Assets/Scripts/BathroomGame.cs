@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BathroomGame : MonoBehaviour
 {
+    public Controller player;
+    public Image wakeUpBar;
+    public GameObject wakeUpBarObj;
     [SerializeField]
     private float chosenDelay = 0;
     [SerializeField]
@@ -24,13 +28,21 @@ public class BathroomGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(value < reached)
+        wakeUpBar.fillAmount = (1f / reached * value);
+
+        if (value < reached)
         {
             Steps();
+            player.allowControl = false;
         }
         if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {          
-            value++;
+            value++;           
+        }
+        if(value >= reached)
+        {
+            wakeUpBarObj.SetActive(false);
+            player.allowControl = true;
         }
     }
 
