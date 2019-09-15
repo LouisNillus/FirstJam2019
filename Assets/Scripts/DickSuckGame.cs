@@ -9,6 +9,8 @@ public class DickSuckGame : MonoBehaviour
 
     public int scoreToReach;
     public int buttonToPress;
+    public Transform buttonPosition;
+    public Transform resetGamePosition;
     public int points;
     public float time;
     public List<GameObject> buttons = new List<GameObject>();
@@ -27,15 +29,23 @@ public class DickSuckGame : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        if(points == scoreToReach)
+        if(points >= scoreToReach)
         {
             dicksSucked++;
+            points = 0;
+        }
+
+        if(dicksSucked == 3)
+        {
+            Debug.Log("You won !");
+            Debug.Log("Allow door");
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        buttonToPress = 999;
+        if (collision.CompareTag("Player"))
         {
             collision.GetComponent<Controller>().allowControl = false;
             StartSuckingGame();
@@ -44,22 +54,42 @@ public class DickSuckGame : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.A))
+        if(collision.CompareTag("Player") && Input.GetAxis("Down") < 0f)
         {
             collision.GetComponent<Controller>().allowControl = true;
             StopAllCoroutines();
             CancelInvoke();
             counter = 0;
+            points = 0;
+            foreach (GameObject go in buttons)
+            {
+                go.transform.position = new Vector3(500, 500, 0);
+            }
         }
 
         if(buttonToPress == 999)
         {
             buttonToPress = Random.Range(0, keys.Count);
+            foreach(GameObject go in buttons)
+            {
+                go.transform.position = new Vector3(500, 500, 0);
+            }
+            buttons[buttonToPress].transform.position = buttonPosition.position;
         }
-        else if(collision.CompareTag("Player") && Input.GetKeyDown(keys[buttonToPress]))
+        else if(collision.CompareTag("Player") && Input.GetKeyDown(keys[buttonToPress])) //Bon bouton
         {
             points++;
             buttonToPress = 999;
+        }
+        else if (collision.CompareTag("Player") && buttonToPress != 999) //Mauvais bouton
+        {
+            foreach(KeyCode kc in keys)
+            {
+                if(kc != keys[buttonToPress] && Input.GetKeyDown(kc))
+                {
+                    points--;
+                }
+            }
         }
     }
 
@@ -98,9 +128,20 @@ public class DickSuckGame : MonoBehaviour
         yield return new WaitForSeconds(timeToSuck);
         Debug.Log("Perdu");
         CancelInvoke();
-        IEnumerator vignetteRoutine = ppc.VignetteTransition(ppc.vignette.intensity, 0f, 6f);
+        IEnumerator vignetteRoutine = ppc.VignetteTransition(ppc.vignette.intensity, 0f, 15f);
         StartCoroutine(vignetteRoutine);
         counter = 0;
+        Debug.Log(points);
+        points = 0;
+        foreach (GameObject go in buttons)
+        {
+            go.transform.position = new Vector3(500, 500, 0);
+        }
+
+        buttonToPress = 999;
+        Controller player = FindObjectOfType<Controller>();
+        player.transform.position = resetGamePosition.position;
+        player.allowControl = true;
     }
 
     public void Emitter(int max)
