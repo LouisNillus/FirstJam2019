@@ -7,6 +7,7 @@ public class DickSuckGame : MonoBehaviour
     public PostProcessControl ppc;
     public static int dicksSucked;
 
+    public Animator playerAnimator;
     public int scoreToReach;
     public int buttonToPress;
     public Transform buttonPosition;
@@ -51,6 +52,11 @@ public class DickSuckGame : MonoBehaviour
         buttonToPress = 999;
         if (collision.CompareTag("Player"))
         {
+            playerAnimator.SetBool("IsSucking", true);
+            playerAnimator.SetBool("IsDown", false);
+            playerAnimator.SetBool("IsUp", false);
+            playerAnimator.SetBool("IsRight", false);
+            playerAnimator.SetBool("IsLeft", false);
             collision.GetComponent<Controller>().allowControl = false;
             StartSuckingGame();
         }
@@ -63,8 +69,11 @@ public class DickSuckGame : MonoBehaviour
             collision.GetComponent<Controller>().allowControl = true;
             StopAllCoroutines();
             CancelInvoke();
+            IEnumerator vignetteRoutine = ppc.VignetteTransition(ppc.vignette.intensity, 0f, 15f);
+            StartCoroutine(vignetteRoutine);
             counter = 0;
             points = 0;
+            playerAnimator.SetBool("IsSucking", false);
             foreach (GameObject go in buttons)
             {
                 go.transform.position = new Vector3(500, 500, 0);
@@ -100,7 +109,7 @@ public class DickSuckGame : MonoBehaviour
     public void StartSuckingGame()
     {
         StartCoroutine(SuckingTime(time));
-        InvokeRepeating("BloodSend", 5f, 1f);
+        InvokeRepeating("BloodSend", 3f, 1f);
     }
 
 
@@ -146,6 +155,7 @@ public class DickSuckGame : MonoBehaviour
         Controller player = FindObjectOfType<Controller>();
         player.transform.position = resetGamePosition.position;
         player.allowControl = true;
+        playerAnimator.SetBool("IsSucking", false);
     }
 
     public void Emitter(int max)
