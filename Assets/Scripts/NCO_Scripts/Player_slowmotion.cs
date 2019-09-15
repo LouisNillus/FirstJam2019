@@ -51,7 +51,7 @@ public class Player_slowmotion : MonoBehaviour
                         rb.velocity = new Vector2(0, -8f);
                         break;
                     case float n when n > 0f:
-                        rb.velocity = new Vector2(0, 8);
+                        rb.velocity = new Vector2(0, 16);
                         break;
                 }
             }

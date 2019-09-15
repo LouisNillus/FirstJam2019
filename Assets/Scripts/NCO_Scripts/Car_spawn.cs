@@ -21,7 +21,7 @@ public class Car_spawn : MonoBehaviour
     {
         // ensemble des voitures dispo
         prefabCarList = scrCarList.prefabCarList;
-        InvokeRepeating("GenerateCar", 0f, 0.5f);
+        InvokeRepeating("GenerateCar", 0f, 0.3f);
 
     }
 
@@ -40,7 +40,7 @@ public class Car_spawn : MonoBehaviour
         if ((!Input.GetKey(KeyCode.Joystick1Button0)) && (timeSlowed == true))
         {
             CancelInvoke();
-            InvokeRepeating("GenerateCar", 0f, 0.5f);
+            InvokeRepeating("GenerateCar", 0f, 0.3f);
             timeSlowed = false;
         }
 

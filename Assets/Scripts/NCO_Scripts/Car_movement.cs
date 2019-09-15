@@ -24,7 +24,7 @@ public class Car_movement : MonoBehaviour
         if (objTransform.position.x > 0)
         {
             sprite.sprite = spriteArray[0];
-            rb.velocity = new Vector2(0, initSpeed);
+            rb.velocity = new Vector2(0, initSpeed*2);
         }
         else
         {
