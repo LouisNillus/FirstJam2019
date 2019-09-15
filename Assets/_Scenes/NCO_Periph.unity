@@ -161,7 +161,6 @@ GameObject:
   - component: {fileID: 530013090}
   - component: {fileID: 530013089}
   - component: {fileID: 530013088}
-  - component: {fileID: 530013091}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -234,19 +233,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &530013091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530013087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f876d54b770dbdd4b8c4c8ce9c2e2440, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabCarList: []
 --- !u!1 &546381082
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +367,7 @@ MonoBehaviour:
   maxCarsOnScreen: 16
   spawnLine: 0
   scrCarList: {fileID: 1202639405}
+  activeCarList: []
   columnArray:
   - {fileID: 1111280134}
   - {fileID: 1810376005}
@@ -580,6 +567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1fb9b2bf1a597f42870499e69f13695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrCarList: {fileID: 1202639405}
+  cspawn: {fileID: 1202639406}
 --- !u!1 &1810376004
 GameObject:
   m_ObjectHideFlags: 0
