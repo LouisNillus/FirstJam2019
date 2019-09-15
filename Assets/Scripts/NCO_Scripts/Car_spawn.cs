@@ -14,6 +14,7 @@ public class Car_spawn : MonoBehaviour
     //[SerializeField] List<int> columnList = new List<int>();
     [SerializeField] Transform[] columnArray = new Transform[8];
     bool timeSlowed = false;
+    public Player_slowmotion manaScript;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class Car_spawn : MonoBehaviour
     void Update()
     {
 
-        if ((Input.GetKey(KeyCode.Joystick1Button0)) && (timeSlowed == false))
+        if ((Input.GetKey(KeyCode.Joystick1Button0)) && (timeSlowed == false) && (manaScript.mana > 0))
         {
             CancelInvoke();
             InvokeRepeating("GenerateCar", 0f, 1f);

@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Player_slowmotion : MonoBehaviour
 {
 
     [SerializeField] Car_list scrCarList;
     public Car_spawn cspawn;
+    public int mana = 150;
+    public Image image;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +21,7 @@ public class Player_slowmotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetAxis("right_trigger") > 0.4f) || (Input.GetKey(KeyCode.Joystick1Button0)))
+        if ((Input.GetKey(KeyCode.Joystick1Button0)) && (mana > 0)) 
         {
             Debug.Log("enter");
             foreach(GameObject go in cspawn.activeCarList)
@@ -53,5 +57,20 @@ public class Player_slowmotion : MonoBehaviour
             }
         }
 
+        image.fillAmount = ((1f/150f*mana));
+
     }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.Joystick1Button0))
+        {
+            mana--;
+        }
+        if (mana < 0)
+        {
+            mana = 0;
+        }
+    }
+
 }
