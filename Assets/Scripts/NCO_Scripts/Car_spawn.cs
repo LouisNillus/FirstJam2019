@@ -20,7 +20,7 @@ public class Car_spawn : MonoBehaviour
     {
         // ensemble des voitures dispo
         prefabCarList = scrCarList.prefabCarList;
-        InvokeRepeating("GenerateCar", 0f, 3f);
+        InvokeRepeating("GenerateCar", 0f, 0.5f);
 
     }
 
@@ -36,13 +36,11 @@ public class Car_spawn : MonoBehaviour
 
     IEnumerator SpawnNewCar()
     {
-        delay = Random.Range(0, 3);
-        if (activeCarList.Count < maxCarsOnScreen)
-        {
+        delay = Random.Range(0, 1);
             GameObject newCar = Instantiate(prefabCarList[carSelector], columnArray[spawnColumn]);
             activeCarList.Add(newCar);
-            Debug.Log("ivordnbid");
-        }
+            Debug.Log("instance created");
+            Debug.Log(activeCarList[0]);
 
         yield return new WaitForSeconds(delay);
     }

@@ -16,7 +16,7 @@ public class Car_autodelete : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((objTransform.position.y > 8) || (objTransform.position.y < 8))
+        if(((objTransform.position.y > 8) && (objTransform.position.x > 0 )) || ((objTransform.position.y < -8) && (objTransform.position.x < 0)))
         {
             Destroy(gameObject);
         }
